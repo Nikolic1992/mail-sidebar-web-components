@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  font-size: 1.2rem;
+  color: rgb(82, 81, 81);
+  padding-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.header__icon {
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.header__icon:hover {
+  background-color: rgb(83, 83, 83);
+  cursor: pointer;
+}
+
+.header__icon_element {
+  width: 1.6rem;
+  height: 0.2rem;
+  background-color: rgb(153, 153, 153);
+  margin: 0.25rem 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+button {
+  margin: 0 2rem 2rem 1rem;
+  padding: 1rem 2.3rem;
+  border-radius: 0.9rem;
+  border: none;
+  background-color: #c0e7ff;
+  font-size: 1.2rem;
+}
+
+
+button:hover {
+  box-shadow: 0.3rem 0.37rem 0.55rem 0.06rem rgb(184, 184, 184);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#compose:hover {
+  transition: 0.4s ease;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 7.5rem;
+  background-color: rgb(187, 187, 187);
+  color: #fff;
+  text-align: center;
+  border-radius: 0.37rem;
+  padding: 0.3rem 0;
+  position: absolute;
+  z-index: 1;
+  font-size: 0.8rem;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  width: 5.6rem;
+  height: 1.78rem;
+  top: 100%;
+  left: 50%;
+  margin-left: -2.8rem;
+  margin-top: 0.62rem;
+}

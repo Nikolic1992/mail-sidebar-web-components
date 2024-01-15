@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mail app sidebar - Stevan Nikolic</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header__icon tooltip">
+        <div class="header__icon_element"></div>
+        <div class="header__icon_element"></div>
+        <div class="header__icon_element"></div>
+        <span class="tooltiptext">Main menu</span>
+    </div>
+    <h2 class="header__title">📬 Mail App</h2>
+    </div>
+</header>
+<aside>
+    <button id="compose">✍️ Compose</button>
+    <nav>
+        <app-sidebar-button selected="true" text="Inbox"><slot class="nav__slot" name="icon">📥</slot></app-sidebar-button>
+        <app-sidebar-button text="Starred"><slot name="icon">⭐️</slot></app-sidebar-button>
+        <app-sidebar-button text="Snoozed"><slot name="icon">⏱</slot></app-sidebar-button>
+        <app-sidebar-button text="Sent"><slot name="icon">➡️</slot></app-sidebar-button>
+        <app-sidebar-button text="Drafts" unreadCount="1"><slot name="icon">📄</slot></app-sidebar-button>
+    </nav>
+</aside>
+
+<template id="template">
+  <style>
+
+    body {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+   button {
+        height: 2.7rem;
+        width: 18rem;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        border-radius: 0 3rem 3rem 0;
+        font-size: 1.3rem;
+        display: flex;
+        gap: 1rem;
+        padding-left: 2.7rem;
+        cursor: pointer;
+        }
+    
+    button:hover {
+        background-color: rgb(224, 224, 224);
+    }    
+
+    .button__count_position {
+        display: inline-block;
+        font-size: 1rem;
+        color: rgb(75, 74, 74);
+        margin-left: 6rem;
+    }
+
+    </style>
+
+    <button>
+      <slot class="button__icon"></slot>
+      <span id="text"></span>
+      <span id="unreadCount" class="button__count_position"></span>
+    </button>
+</template>
+</body>
+</html>
